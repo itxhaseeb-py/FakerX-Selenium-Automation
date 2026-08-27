@@ -1,0 +1,64 @@
+selenium>=4.0
+beautifulsoup4>=4.0
+What each requirement means
+
+1. Selenium
+
+selenium>=4.0
+
+Used for controlling Chrome and automating the browser:
+
+Opening the website
+Finding HTML elements
+Clicking buttons
+Entering text
+Waiting for elements
+Navigating between pages
+Reading page information
+Taking screenshots
+Handling browser automation
+
+Your project imports Selenium with things like:
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+2. BeautifulSoup4
+
+beautifulsoup4>=4.0
+
+Used for parsing and inspecting HTML.
+
+In your project, you used it to inspect the cart:
+
+from bs4 import BeautifulSoup
+
+and:
+
+soup = BeautifulSoup(driver.page_source, "html.parser")
+
+This allowed you to inspect the actual cart HTML and verify that the product was present.
+
+Final requirements.txt
+
+Your file should literally contain only:
+
+selenium>=4.0
+beautifulsoup4>=4.0
+
+You do not put:
+
+time
+
+or:
+
+os
+
+or:
+
+By
+WebDriverWait
+EC
